@@ -1,8 +1,12 @@
 import requests
+import os
+from dotenv import load_dotenv
 
+
+load_dotenv()
 # Constants
 ETHERSCAN_API_URL = 'https://api.etherscan.io/api'
-API_KEY = 'ZJJCCMP7GWVRM8QX9NHZENSKAEF631RF5M'
+API_KEY = os.getenv("ETHERSCAN_API_KEY")
 
 
 def get_contract_creation(contract_address):
